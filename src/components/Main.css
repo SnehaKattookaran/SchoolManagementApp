@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --background-color1: #f6f6f8;
+  --background-color2: #ffffff;
+  --background-color3: #ededed;
+  --background-color4: rgb(197, 241, 208);
+  --primary-color: #0c007d;
+}
+
+body {
+  background-color: var(--background-color4);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.dashboard-header {
+  height: 70px;
+  width: 100vw;
+  padding: 0 30px;
+  background-color: var(--background-color1);
+  position: fixed;
+  z-index: 100;
+  box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logosection,
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.appname {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(47, 141, 70);
+}
+
+.logo {
+  height: 60px;
+  border-radius: 50px;
+  margin-top: 12px;
+}
+
+.icn {
+  height: 30px;
+}
+
+.menuicn {
+  cursor: pointer;
+  padding-right: 15px;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 8vh;
+}
+
+.searchbar input {
+  width: 250px;
+  height: 42px;
+  border-radius: 50px 0 0 50px;
+  background-color: var(--background-color3);
+  padding: 0 20px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+
+.searchbtn {
+  width: 50px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 50px 50px 0px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.profile {
+  gap: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.name {
+  position: relative;
+}
+.dp {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dpicn {
+  height: 42px;
+}
+
+.main-container {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  top: 60px;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+.main {
+  height: calc(100vh - 70px);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 40px 30px 30px 30px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+}
+.main::-webkit-scrollbar {
+  width: 5px;
+}
+.main::-webkit-scrollbar-track {
+  background-color: #9e9e9eb2;
+}
+
+.click {
+  height: 20vh;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.click-btn {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: teal;
+  color: white;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navcontainer {
+  height: calc(108vh - 70px);
+  width: 250px;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.navcontainer::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+}
+.navcontainer::-webkit-scrollbar {
+  width: 3px;
+}
+.navcontainer::-webkit-scrollbar-track {
+  background-color: #9e9e9eb2;
+}
+
+.nav {
+  min-height: 100vh;
+  width: 250px;
+  background-color: var(--background-color2);
+  position: absolute;
+  top: 0px;
+  left: 00;
+  box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 30px 0 20px 10px;
+}
+
+.navclose {
+  width: 0px;
+}
+
+.nav-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-option {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 20px;
+  gap: 20px;
+  transition: all 0.1s ease-in-out;
+  color: var(--primary-color);
+}
+.nav-option:hover {
+  border-left: 5px solid #020131af;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  color: white;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.box {
+  height: 150px;
+  width: 300px;
+  box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.08);
+}
+
+.box:nth-child(1) {
+  background-color: var(--primary-color);
+}
+.box:nth-child(2) {
+  background-color: var(--primary-color);
+}
+.box:nth-child(3) {
+  background-color: var(--primary-color);
+}
+
+.box .text {
+  color: white;
+}
+
+.box-heading {
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.count {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.label-tag {
+  width: 100px;
+  text-align: center;
+  background-color: rgb(0, 177, 0);
+  color: white;
+  border-radius: 4px;
+}
+
+.stud-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.stud-table td,
+.stud-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.stud-table tr:nth-child(odd) {
+  background-color: white;
+}
+.stud-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.stud-table tr:hover {
+  background-color: #ddd;
+}
+.stud-table tr:first-child {
+  background-color: var(--primary-color);
+  color: white;
+}
+.sort {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.asc,
+.dsc {
+  height: 13px;
+  width: 15px;
+  border: #000000;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+.asc:hover,
+.dsc:hover {
+  transform: scale(1.3);
+}
+  
