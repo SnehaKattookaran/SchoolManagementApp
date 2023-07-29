@@ -13,9 +13,9 @@ function Login() {
 
   const [userList, setUserList] = useState([]);
   useEffect(() => {
-    axios.get("https://reqres.in/api/users").then((res) => {
-      console.log(res.data.data);
-      setUserList(res.data.data);
+    axios.get("https://f5ac0bfb-1286-499c-9867-58e9a6a432d7.mock.pstmn.io").then((res) => {
+      console.log(res);
+      setUserList(res);
     });
   }, []);
 
